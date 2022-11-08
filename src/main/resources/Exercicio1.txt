@@ -1,7 +1,7 @@
 As provas ninjas começaram, tente subir mais um nivel em sua jornada! Dattebayo!!!!
 
 1- Desafio Iruka-sensei 
-	- Cria teste unitario para cobrir pelo menos 80% do código,
+	- Criar testes unitarios para cobrir pelo menos 80% do código,
 	Dica: Além de concentrar chakra com calma, lembre-se de cobrir as principais classes (service, domain e repository)
 	  dessa forma o clone será quase perfeito. 
 	  
