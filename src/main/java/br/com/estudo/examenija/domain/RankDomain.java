@@ -14,7 +14,7 @@ public class RankDomain {
 	
 	private String newRank;
 	private RankEnum statusEnum; 
-	private static String STATUS_RESULT = "PASSED";
+	private static String STATUS_RESULT = "PASSED"; //NOTPASS
 	
 	@Getter(value = AccessLevel.NONE)
 	@Setter(value = AccessLevel.NONE)
@@ -24,14 +24,17 @@ public class RankDomain {
 		this.rankRepository = rankRepository;
 	}
 	
-	public String getRankStatus(final String result,final String currentRating) {
+	public String getRankStatus(final String result, String currentRating) {
 		RankDomain rank = new RankDomain();
-		if(STATUS_RESULT.equals(result)) {
+		if(result.equals(STATUS_RESULT)) {
 			int resultTest = validateResult(currentRating);
 			rank.setStatusEnum(rankRepository.getExamRank(resultTest));
 			rank.setNewRank(rank.getStatusEnum().getRank());
+			return rank.getNewRank();
 		}
 		rank.setNewRank("Come back next year");
+		
+		
 		
 		
 		return rank.getNewRank();

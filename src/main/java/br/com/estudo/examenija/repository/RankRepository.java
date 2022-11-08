@@ -8,7 +8,8 @@ import br.com.estudo.examenija.enumerator.RankEnum;
 public class RankRepository {
 	
 	public RankEnum getExamRank(final Integer resultTest) {
-		return RankEnum.codeEnum(resultTest);
+		var result = RankEnum.codeEnum(resultTest);
+		return result;
 	}
 
 }
